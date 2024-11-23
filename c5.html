@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, intinal-scale=1.0">
+        <title>Ẩn hiện đoạn văn</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                padding: 50px;
+            }
+            button {
+                padding: 10px 20px;
+                font-size: 16px;
+                margin: 10px;
+                cursor: pointer;
+            }
+            #text {
+                font-size: 18px;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Có yêu Hương không nhở :>> </h1>
+        <button onclick="showText('Không')">Không</button>
+        <button onclick="showText('Có')">Có</button>
+        <p id="text" style="display: none">Cậu bị ngu à. Chọn lại nhanh lên!</p>
+        <script>
+            function showText(answer) {
+                const textElement = document.getElementById('text');
+                if (answer === 'Không') {
+                    textElement.textContent = "Cậu bị ngu à. Chọn lại nhanh lên!";
+                } else {
+                    textElement.textContent = "Đúng rồi :)). Hương cũng yêu cậu :3";
+                }
+                textElement.style.display = 'block';
+            }
+        </script>
+    </body>
+</HTML>
